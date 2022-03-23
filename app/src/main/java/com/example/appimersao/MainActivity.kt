@@ -11,7 +11,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val texto = findViewById<TextView>(R.id.meu_texto)
+        val note = Note("1", "titulo", "descricao")
+
+        val noteDatabase = NoteDatabase()
+
+        val notaAtualizada = mapOf( "title" to "Novo titulo",
+                                    "descricao" to "Nova descriçâo")
+
+        //noteDatabase.criarNovaNota(note)
+
+        //noteDatabase.atualizarNota("Passe o id da nota do firebase ",notaAtualizada)
+
+        //noteDatabase.excluirNota("Passe o id da nota do firebase ")
+
+        //noteDatabase.lerNota("Passe o id da nota do firebase ")
+
+        noteDatabase.lerTodasAsNotas()
 
 
     }
